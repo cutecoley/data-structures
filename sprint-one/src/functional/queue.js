@@ -8,27 +8,21 @@ var Queue = function() {
   // Implement the methods below
 
   someInstance.enqueue = function(value) {
-    counter++;
     storage[counter] = value;
-    if (value === 'z') {
-      debugger;
-    }
+    counter++;
   };
 
   someInstance.dequeue = function() {
-  
-    var smallestKey = Object.keys(storage)[0];
-    if (counter > 0) {
-      counter--;  
+    if(incrementer < counter){
+      var deleteObj = storage[incrementer];
+      incrementer++;
+      return  deleteObj;
     }
-    var output = storage[smallestKey];
-    delete storage[smallestKey];
-    return output;
 
   };
 
   someInstance.size = function() {
-    return counter;
+    return counter - incrementer;
   };
 
   return someInstance;
