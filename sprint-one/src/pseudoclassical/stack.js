@@ -1,11 +1,12 @@
 var Stack = function() {
   this.counter = 0;
   this.storage = {};
- };
+};
   
 Stack.prototype.push = function(value) { 
   this.storage[this.counter] = value; 
   this.counter++;
+  var test = 10;
 };
 
 Stack.prototype.pop = function() {    
