@@ -9,7 +9,7 @@ var LinkedList = function() {
     if (list.tail !== null) {
       var oldTail = list.tail;
       list.tail.next = newNode;
-      console.log('list head: ', list.head);
+      
     } else {
       list.head = newNode;
     }
