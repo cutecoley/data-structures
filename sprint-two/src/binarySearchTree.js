@@ -15,7 +15,7 @@ binaryTreeMethods.insert =  function(value) {
  
  if (!this.contains(value))
  {
-  	var currentTree = this;
+  	
 	while (true) {
 	 if ((value < currentTree.value) && (currentTree.left !== null) ){
 	 	currentTree = currentTree.left;
@@ -36,6 +36,7 @@ binaryTreeMethods.insert =  function(value) {
   }
 };
 
+
 binaryTreeMethods.contains =  function(value) {
 
  var currentTree = this;
@@ -54,7 +55,7 @@ binaryTreeMethods.contains =  function(value) {
 	 	return  false;
 	 }	 	
  }
- return false;
+ //return false;
 };
 
 binaryTreeMethods.depthFirstLog =  function(cb) {
